@@ -12,7 +12,7 @@ apply(from = "../dsl/bintray.gradle")
  *      https://github.com/ReactiveX/RxKotlin
  */
 dependencies {
-    "api"("com.eaglesakura.armyknife.armyknife-jetpack:armyknife-jetpack:1.3.8")
+    "api"("com.eaglesakura.armyknife.armyknife-jetpack:armyknife-jetpack:1.3.10")
 
     /**
      * Core architexture
