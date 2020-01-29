@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.eaglesakura.armyknife.android.junit4.extensions.compatibleBlockingTest
 import com.eaglesakura.armyknife.android.junit4.extensions.makeActivityViewModel
+import com.eaglesakura.armyknife.android.junit4.extensions.targetApplication
 import kotlinx.coroutines.Dispatchers
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
@@ -20,7 +21,7 @@ class SavedStateHandleExtensionsKtTest {
         val viewModel = makeActivityViewModel { activity ->
             ViewModelProviders.of(
                 activity,
-                SavedStateViewModelFactory(activity)
+                SavedStateViewModelFactory(targetApplication, activity)
             ).get(ExampleViewModel::class.java)
         }
 
