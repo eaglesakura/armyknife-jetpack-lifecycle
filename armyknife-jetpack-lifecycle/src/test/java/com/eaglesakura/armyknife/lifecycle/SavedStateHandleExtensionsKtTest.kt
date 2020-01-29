@@ -3,7 +3,7 @@ package com.eaglesakura.armyknife.lifecycle
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.SavedStateViewModelFactory
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.eaglesakura.armyknife.android.junit4.extensions.compatibleBlockingTest
 import com.eaglesakura.armyknife.android.junit4.extensions.makeActivityViewModel
@@ -19,10 +19,8 @@ class SavedStateHandleExtensionsKtTest {
     @Test
     fun delegateValue() = compatibleBlockingTest(Dispatchers.Main) {
         val viewModel = makeActivityViewModel { activity ->
-            ViewModelProviders.of(
-                activity,
-                SavedStateViewModelFactory(targetApplication, activity)
-            ).get(ExampleViewModel::class.java)
+            ViewModelProvider(activity, SavedStateViewModelFactory(targetApplication, activity))
+                .get(ExampleViewModel::class.java)
         }
 
         assertNull(viewModel.handle.get("url"))
