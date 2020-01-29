@@ -40,6 +40,8 @@ dependencies {
     "api"("androidx.lifecycle:lifecycle-common-java8:2.2.0")
     "api"("androidx.lifecycle:lifecycle-reactivestreams:2.2.0")
     "api"("androidx.lifecycle:lifecycle-reactivestreams-ktx:2.2.0")
+    "api"("androidx.lifecycle:lifecycle-livedata:2.2.0")
+    "api"("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
     "api"("androidx.savedstate:savedstate:1.0.0")
 
 }

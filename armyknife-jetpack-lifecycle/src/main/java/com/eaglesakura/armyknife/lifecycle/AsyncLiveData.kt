@@ -19,6 +19,7 @@ import kotlin.coroutines.CoroutineContext
  *      // call onActive().
  * }
  */
+@Deprecated("Replace to KTX 'liveData{}' extension")
 class AsyncLiveData<T>(
     private val context: CoroutineContext,
     private val factory: suspend (self: LiveData<T>) -> T?
